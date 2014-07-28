@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.ac.st.asojuku.original2014002.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <Button
+        android:id="@+id/buttonm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttont"
+        android:layout_alignBottom="@+id/buttont"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="45dp"
+        android:text="メンテ" />
+
+    <EditText
+        android:id="@+id/EditText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonm"
+        android:layout_centerVertical="true"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/buttonc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EditText1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/buttont"
+        android:layout_marginBottom="71dp"
+        android:text="一言チェック" />
+
+    <Button
+        android:id="@+id/buttont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonc"
+        android:layout_alignRight="@+id/EditText1"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="14dp"
+        android:text="登録" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/EditText1"
+        android:layout_marginBottom="85dp"
+        android:layout_toRightOf="@+id/buttonm"
+        android:text="一言の登録" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp"
+        android:text="今日の一言" />
+
+</RelativeLayout>
