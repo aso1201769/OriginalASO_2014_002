@@ -1,16 +1,13 @@
 package jp.ac.st.asojuku.original2014002;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -26,11 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		if (savedInstanceState == null) {
-			getFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment())
-					.commit();
-		}
+		
 	}
 
 	@Override
@@ -125,24 +118,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		@Override
-		public void onCreate(Bundle savedInstanceState) {
-			// TODO 自動生成されたメソッド・スタブ
-			super.onCreate(savedInstanceState);
-			setContentView(R.layout.hutakoto);
-		}
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.activity_main, container, false);
-			return rootView;
-		}
-	}
+	
 
 }

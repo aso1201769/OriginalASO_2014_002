@@ -35,7 +35,25 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 					"Hitokoto ( _id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , phrase TEXT )");
 
 	}
-
+	public SQLiteCursor selectHitokotoList(SQLiteDatabase db){
+		
+		SQLiteCursor cursor = null;
+		
+		String sqlstr = " SELECT _id, phrase FROM Hitokoto ORDER BY _id;";
+		try {
+			cursor = (SQLiteCursor)db.rawQuery(sqlstr, null);
+			if(cursor.getCount()!=0){
+				cursor.moveToFirst();
+				
+			}
+		} catch (SQLException e){
+			 Log.e("ERROR", e.toString());
+		}finally {
+			
+		}
+		return cursor;
+		}
+	
 	/* (非 Javadoc)
 	 * @see android.database.sqlite.SQLiteOpenHelper#onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
 	 */
@@ -100,7 +118,7 @@ public String selectRandomhutakoto(SQLiteDatabase db){
 
 
 
-public void deletehutakoto(SQLiteDatabase db, int id){
+public void deletehitokoto(SQLiteDatabase db, int id){
 	
 		String sqlstr = " DELETE FROM Hitokoto where _id = " + id + " ;";
 		try {

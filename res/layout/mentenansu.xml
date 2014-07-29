@@ -5,12 +5,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <Button
+        android:id="@+id/btnMainte_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnDelete"
+        android:layout_alignBottom="@+id/btnDelete"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="54dp"
+        android:text="メンテ" />
+
     <ListView
-        android:id="@+id/listView1"
+        android:id="@+id/Lvhitokoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:layout_above="@+id/btnMainte_back" >
+
     </ListView>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="54dp"
+        android:layout_marginLeft="37dp"
+        android:text="削除" />
 
 </RelativeLayout>
